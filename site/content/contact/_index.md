@@ -1,6 +1,6 @@
 ---
 title: Contacto
-logo: img/fondo_titulo.jpg
+logo: img/unomaslogo.png
 contact_entries:
   - heading: Localización
     text: Gijón - Asturias
