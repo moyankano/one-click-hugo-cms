@@ -1,5 +1,5 @@
 ---
-title: AWS Cloud Practitioner
+title: Certificación AWS Cloud Practitioner
 date: 2023-05-28T18:31:21.954Z
 description: "#AWS"
 ---
