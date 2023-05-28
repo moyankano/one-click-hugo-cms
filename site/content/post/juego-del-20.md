@@ -1,12 +1,13 @@
 ---
 title: Juego del 20
 date: 2023-05-28T17:58:17.862Z
-description: >+
-  El juego se ha desarrollado en Android y Kotlin en el entorno de Android
-  Studio.
+description: |+
+  #Android
 
 image: img/juegocartas20_googleplay.png
 ---
+El juego se ha desarrollado en Android y Kotlin en el entorno de Android Studio.
+
 Juego de cartas donde gana quien obtiene el número 20 cuando se giran 3 de las 5 cartas. En la parte superior se muestra un número que representa la suma total de las cartas en cada partida. En la parte inferior se muestra el número de partidas ganadas y un cronómetro. Cuando se ganan tres partidas el cronómetro se para.
 
 ![IconoIT](img/iconoit.png "IconoIT")
