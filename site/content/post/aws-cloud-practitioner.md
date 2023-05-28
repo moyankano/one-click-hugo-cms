@@ -1,7 +1,7 @@
 ---
 title: AWS Cloud Practitioner
 date: 2023-05-28T18:31:21.954Z
-description: Certificación AWS Cloud Practitioner
+description: "#AWS"
 ---
 A continuación se muestra un itinerario para aprobar el examen de AWS Cloud Practitioner:
 
