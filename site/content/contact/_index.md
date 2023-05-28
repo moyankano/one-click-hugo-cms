@@ -1,6 +1,6 @@
 ---
 title: Contacto
-logo: img/arbol.jpg
+logo: img/fondo_titulo.jpg
 contact_entries:
   - heading: Localización
     text: Gijón - Asturias
