@@ -11,6 +11,6 @@ intro:
     certificaciones.
 products: []
 values:
-  heading: ¡Práctica!
+  heading: ¡Practica!
   text: Repasa el contenido y ponlo en práctica
 ---
