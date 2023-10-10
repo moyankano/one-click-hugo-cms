@@ -9,8 +9,4 @@ intro:
   heading: ¡Ojetivo!
   text: Aspectos generales del desarrollo del software y la preparación de
     certificaciones.
-products: []
-values:
-  heading: ¡Práctica!
-  text: Repasa el contenido y ponlo en práctica
 ---
