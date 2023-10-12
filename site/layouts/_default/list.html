@@ -2,6 +2,17 @@
 
 {{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" "Últimos Posts") }}
 
+{{ $taxonomy := "tags" }} {{ with .Param $taxonomy }}
+<ul>
+{{ range $index, $tag := . }} {{ with $.Site.GetPage (printf "/%s/%s"
+$taxonomy $tag) -}}
+<li>
+  <a href="{{ .Permalink }}">{{ $tag | urlize }}</a>
+</li>
+{{- end -}} {{- end -}}
+</ul>
+{{ end }}
+
 <div class="mw7 center">
   <ul id="blog-list" class="flex-ns flex-wrap mhn1-ns pa3">
       {{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
