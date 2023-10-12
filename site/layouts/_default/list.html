@@ -4,29 +4,29 @@
 
 <div class="mw7 center">
 
-  <ul id="blog-list" class="flex-ns flex-wrap mhn1-ns pa3">
-      <div class="container tagcloud">
-        {{ if ne (len $.Site.Taxonomies.tags) 0 }}
-          {{ $largestFontSize := 1.4 }}
-          {{ $smallestFontSize := 1.0 }}
-          {{ $fontSpread := sub $largestFontSize $smallestFontSize }}
-          {{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
-          {{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
-          {{ $spread := sub $max $min }}
-          {{ $fontStep := div $fontSpread $spread }}
-            {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
-              {{ $tagCount := len $taxonomy.Pages }}
-              {{ $currentFontSize := (add $smallestFontSize (mul (sub $tagCount $min) $fontStep) ) }}
-              {{ $weigth := div (sub (math.Log $tagCount) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
-              {{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weigth)) }}
-                <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}" 
-                class="tagcloud-item" style="font-size: {{ $currentFontSize }}rem;">
-                  {{ $name }}<sup>{{ $tagCount }}</sup>
-                </a>
-            {{ end }}
+  <div class="container tagcloud">
+    {{ if ne (len $.Site.Taxonomies.tags) 0 }}
+      {{ $largestFontSize := 1.4 }}
+      {{ $smallestFontSize := 1.0 }}
+      {{ $fontSpread := sub $largestFontSize $smallestFontSize }}
+      {{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
+      {{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
+      {{ $spread := sub $max $min }}
+      {{ $fontStep := div $fontSpread $spread }}
+        {{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
+          {{ $tagCount := len $taxonomy.Pages }}
+          {{ $currentFontSize := (add $smallestFontSize (mul (sub $tagCount $min) $fontStep) ) }}
+          {{ $weigth := div (sub (math.Log $tagCount) (math.Log $min)) (sub (math.Log $max) (math.Log $min)) }}
+          {{ $currentFontSize := (add $smallestFontSize (mul (sub $largestFontSize $smallestFontSize) $weigth)) }}
+            <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}" 
+            class="tagcloud-item" style="font-size: {{ $currentFontSize }}rem;">
+              {{ $name }}<sup>{{ $tagCount }}</sup>
+            </a>
         {{ end }}
-      </div>
-    
+    {{ end }}
+  </div>
+
+  <ul id="blog-list" class="flex-ns flex-wrap mhn1-ns pa3">
       {{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
           <li class="w-50-ns ph1-ns flex">
             {{ .Render "li"}}
