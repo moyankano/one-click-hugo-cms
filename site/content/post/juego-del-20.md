@@ -3,6 +3,7 @@ title: Juego del 20
 date: 2023-05-28T17:58:17.862Z
 description: "#Android"
 tags: ['Android']
+categories: ['Development']
 image: img/juegocartas20_googleplay.png
 ---
 El juego se ha desarrollado en Android y Kotlin en el entorno de Android Studio.
