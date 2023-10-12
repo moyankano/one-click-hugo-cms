@@ -1,8 +1,7 @@
 ---
 title: Juego del 20
 date: 2023-05-28T17:58:17.862Z
-description: |+
-  #Android
+tags: "Android"
 
 image: img/juegocartas20_googleplay.png
 ---
