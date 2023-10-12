@@ -2,16 +2,6 @@
 
 {{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" "Últimos Posts") }}
 
-<div class="tags-list">
-  {{- with .Params.tags -}}
-      {{- if ge (len .) 1 -}}
-          {{- range . -}}
-              <a href="{{ $.Site.BaseURL }}tags/{{ . | urlize }}/">#{{ . }}</a>
-          {{ end -}}
-      {{- end -}}
-  {{- end -}}
-</div>
-
 <div class="mw7 center">
   <ul id="blog-list" class="flex-ns flex-wrap mhn1-ns pa3">
       {{ range (.Paginator 4).Pages.ByPublishDate.Reverse }}
